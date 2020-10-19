@@ -61,7 +61,18 @@ TEST_CASE(operator_incr)
     EXPECT_EQ(a++, 8);
     EXPECT_EQ(a++, 9);
     EXPECT_EQ(a, 10);
-    // TODO: If decrementing gets supported, test it.
+}
+
+TEST_CASE(operator_decr)
+{
+    Checked<int> a = 10;
+    EXPECT_EQ(--a, 9);
+    EXPECT_EQ(--a, 8);
+    EXPECT_EQ(--a, 7);
+    EXPECT_EQ(a--, 6);
+    EXPECT_EQ(a--, 5);
+    EXPECT_EQ(a--, 4);
+    EXPECT_EQ(a, 3);
 }
 
 TEST_CASE(operator_cmp)
@@ -281,6 +292,26 @@ TEST_CASE(should_constexpr_postfix_increment)
         return value;
     }();
     static_assert(checked_value == 43);
+}
+
+TEST_CASE(should_constexpr_prefix_decrement)
+{
+    constexpr auto checked_value = [] {
+        Checked<int> value { 42 };
+        --value;
+        return value;
+    }();
+    static_assert(checked_value == 41);
+}
+
+TEST_CASE(should_constexpr_postfix_decrement)
+{
+    constexpr auto checked_value = [] {
+        Checked<int> value { 42 };
+        --value;
+        return value;
+    }();
+    static_assert(checked_value == 41);
 }
 
 TEST_CASE(should_constexpr_check_for_overflow_addition)
