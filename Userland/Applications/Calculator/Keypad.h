@@ -15,9 +15,6 @@
 
 class Keypad final {
 public:
-    Keypad();
-    ~Keypad();
-
     void type_digit(int digit);
     void type_decimal_point();
     void type_backspace();

@@ -17,10 +17,6 @@ PlaybackManager::PlaybackManager(NonnullRefPtr<Audio::ClientConnection> connecti
     m_timer->stop();
 }
 
-PlaybackManager::~PlaybackManager()
-{
-}
-
 void PlaybackManager::set_loader(NonnullRefPtr<Audio::Loader>&& loader)
 {
     stop();

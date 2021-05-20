@@ -29,8 +29,6 @@ public:
     constexpr static size_t default_row_count = 100;
     constexpr static size_t default_column_count = 26;
 
-    ~Sheet();
-
     Optional<Position> parse_cell_name(const StringView&) const;
     Optional<size_t> column_index(const StringView& column_name) const;
     Optional<String> column_arithmetic(const StringView& column_name, int offset);

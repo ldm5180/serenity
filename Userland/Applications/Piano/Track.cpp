@@ -21,10 +21,6 @@ Track::Track(const u32& time)
     set_release(5);
 }
 
-Track::~Track()
-{
-}
-
 void Track::fill_sample(Sample& sample)
 {
     Audio::Frame new_sample;

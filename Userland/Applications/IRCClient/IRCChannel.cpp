@@ -19,10 +19,6 @@ IRCChannel::IRCChannel(IRCClient& client, const String& name)
     m_window->set_log_buffer(*m_log);
 }
 
-IRCChannel::~IRCChannel()
-{
-}
-
 NonnullRefPtr<IRCChannel> IRCChannel::create(IRCClient& client, const String& name)
 {
     return adopt_ref(*new IRCChannel(client, name));

@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <AK/Optional.h>
 #include <AK/String.h>
 
 namespace TextEditor {
@@ -13,7 +14,6 @@ namespace TextEditor {
 class FileArgument final {
 public:
     explicit FileArgument(String);
-    ~FileArgument();
 
     String filename() { return m_filename; }
     Optional<size_t> line() { return m_line; }

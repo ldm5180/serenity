@@ -21,10 +21,6 @@
 
 namespace Spreadsheet {
 
-SpreadsheetView::~SpreadsheetView()
-{
-}
-
 void SpreadsheetView::EditingDelegate::set_value(const GUI::Variant& value)
 {
     if (value.as_string().is_null()) {

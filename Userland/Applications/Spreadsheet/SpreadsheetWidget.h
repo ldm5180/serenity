@@ -17,8 +17,6 @@ class SpreadsheetWidget final : public GUI::Widget {
     C_OBJECT(SpreadsheetWidget);
 
 public:
-    ~SpreadsheetWidget();
-
     void save(const StringView& filename);
     void load(const StringView& filename);
     bool request_close();

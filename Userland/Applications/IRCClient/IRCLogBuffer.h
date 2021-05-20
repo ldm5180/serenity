@@ -15,7 +15,6 @@
 class IRCLogBuffer : public RefCounted<IRCLogBuffer> {
 public:
     static NonnullRefPtr<IRCLogBuffer> create();
-    ~IRCLogBuffer();
 
     struct Message {
         time_t timestamp { 0 };

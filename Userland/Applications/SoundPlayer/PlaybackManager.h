@@ -18,7 +18,6 @@
 class PlaybackManager final {
 public:
     PlaybackManager(NonnullRefPtr<Audio::ClientConnection>);
-    ~PlaybackManager();
 
     void play();
     void stop();

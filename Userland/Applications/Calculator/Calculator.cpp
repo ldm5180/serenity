@@ -8,14 +8,6 @@
 #include <AK/Assertions.h>
 #include <math.h>
 
-Calculator::Calculator()
-{
-}
-
-Calculator::~Calculator()
-{
-}
-
 double Calculator::begin_operation(Operation operation, double argument)
 {
     double res = 0.0;

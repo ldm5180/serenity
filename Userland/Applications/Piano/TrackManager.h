@@ -20,7 +20,6 @@ class TrackManager {
 
 public:
     TrackManager();
-    ~TrackManager();
 
     Track& current_track() { return *m_tracks[m_current_track]; }
     Span<const Sample> buffer() const { return m_current_front_buffer; }

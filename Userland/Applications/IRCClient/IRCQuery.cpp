@@ -17,10 +17,6 @@ IRCQuery::IRCQuery(IRCClient& client, const String& name)
     m_window->set_log_buffer(*m_log);
 }
 
-IRCQuery::~IRCQuery()
-{
-}
-
 NonnullRefPtr<IRCQuery> IRCQuery::create(IRCClient& client, const String& name)
 {
     return adopt_ref(*new IRCQuery(client, name));

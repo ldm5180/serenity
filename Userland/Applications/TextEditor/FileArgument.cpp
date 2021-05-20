@@ -55,8 +55,4 @@ FileArgument::FileArgument(String file_argument)
     }
 }
 
-FileArgument::~FileArgument()
-{
-}
-
 }

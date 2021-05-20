@@ -19,7 +19,6 @@ class IRCWindow;
 class IRCQuery : public RefCounted<IRCQuery> {
 public:
     static NonnullRefPtr<IRCQuery> create(IRCClient&, const String& name);
-    ~IRCQuery();
 
     String name() const { return m_name; }
     void add_message(char prefix, const String& name, const String& text, Color = Color::Black);

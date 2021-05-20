@@ -19,7 +19,7 @@ class CellEditor final : public GUI::TextEditor {
     C_OBJECT(CellEditor);
 
 public:
-    virtual ~CellEditor() { }
+    virtual ~CellEditor() = default;
 
     Function<void(GUI::KeyEvent&)> on_cursor_key_pressed;
 
@@ -86,8 +86,6 @@ class SpreadsheetView final : public GUI::Widget {
     C_OBJECT(SpreadsheetView);
 
 public:
-    ~SpreadsheetView();
-
     Sheet* sheet_if_available() { return m_sheet; }
 
     const GUI::ModelIndex* cursor() const

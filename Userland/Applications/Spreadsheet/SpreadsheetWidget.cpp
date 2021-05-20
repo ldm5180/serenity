@@ -337,7 +337,4 @@ void SpreadsheetWidget::set_filename(const String& filename)
     }
 }
 
-SpreadsheetWidget::~SpreadsheetWidget()
-{
-}
 }

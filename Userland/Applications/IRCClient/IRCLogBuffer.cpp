@@ -34,10 +34,6 @@ IRCLogBuffer::IRCLogBuffer()
     m_container_element = body_element;
 }
 
-IRCLogBuffer::~IRCLogBuffer()
-{
-}
-
 static String timestamp_string()
 {
     auto now = time(nullptr);

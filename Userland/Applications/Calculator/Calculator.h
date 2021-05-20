@@ -15,9 +15,6 @@
 
 class Calculator final {
 public:
-    Calculator();
-    ~Calculator();
-
     enum class Operation {
         None,
         Add,

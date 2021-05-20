@@ -68,10 +68,6 @@ Sheet::Sheet(Workbook& workbook)
     }
 }
 
-Sheet::~Sheet()
-{
-}
-
 JS::Interpreter& Sheet::interpreter() const
 {
     return m_workbook.interpreter();

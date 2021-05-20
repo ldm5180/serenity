@@ -8,14 +8,6 @@
 #include <AK/StringBuilder.h>
 #include <math.h>
 
-Keypad::Keypad()
-{
-}
-
-Keypad::~Keypad()
-{
-}
-
 void Keypad::type_digit(int digit)
 {
     switch (m_state) {

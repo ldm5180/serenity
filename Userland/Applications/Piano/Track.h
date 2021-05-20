@@ -21,7 +21,6 @@ class Track {
 
 public:
     explicit Track(const u32& time);
-    ~Track();
 
     const Vector<Audio::Frame>& recorded_sample() const { return m_recorded_sample; }
     const SinglyLinkedList<RollNote>& roll_notes(int note) const { return m_roll_notes[note]; }

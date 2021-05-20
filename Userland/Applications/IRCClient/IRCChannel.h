@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "IRCChannelMemberListModel.h"
 #include "IRCLogBuffer.h"
 #include <AK/RefCounted.h>
 #include <AK/RefPtr.h>
@@ -13,13 +14,11 @@
 #include <AK/Vector.h>
 
 class IRCClient;
-class IRCChannelMemberListModel;
 class IRCWindow;
 
 class IRCChannel : public RefCounted<IRCChannel> {
 public:
     static NonnullRefPtr<IRCChannel> create(IRCClient&, const String&);
-    ~IRCChannel();
 
     bool is_open() const { return m_open; }
     void set_open(bool b) { m_open = b; }
