@@ -33,7 +33,7 @@ static constexpr bool point_within_clip_plane(FloatVector4 const& vertex)
 }
 
 template<Clipper::ClipPlane plane>
-static constexpr Vertex clip_intersection_point(Vertex const& p1, Vertex const& p2)
+ALWAYS_INLINE static constexpr Vertex clip_intersection_point(Vertex const& p1, Vertex const& p2)
 {
     constexpr FloatVector4 clip_plane_normals[] = {
         { 1, 0, 0, 0 },  // Left Plane
